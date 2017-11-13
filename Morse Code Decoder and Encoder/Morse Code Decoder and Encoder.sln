@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Morse Code Decoder and Encoder", "Morse Code Decoder and Encoder\Morse Code Decoder and Encoder.vcxproj", "{56D689E8-4262-4DA7-B92E-0F18D5D734DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Debug|x64.ActiveCfg = Debug|x64
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Debug|x64.Build.0 = Debug|x64
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Debug|x86.ActiveCfg = Debug|Win32
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Debug|x86.Build.0 = Debug|Win32
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Release|x64.ActiveCfg = Release|x64
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Release|x64.Build.0 = Release|x64
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Release|x86.ActiveCfg = Release|Win32
+		{56D689E8-4262-4DA7-B92E-0F18D5D734DD}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEDFFF96-8EA9-40C3-82D9-1B12C5A4321A}
+	EndGlobalSection
+EndGlobal
