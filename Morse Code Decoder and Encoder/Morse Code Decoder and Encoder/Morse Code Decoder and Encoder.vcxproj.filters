@@ -32,5 +32,13 @@
     <ClCompile Include="Encoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Decoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\..\Downloads\morse.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
