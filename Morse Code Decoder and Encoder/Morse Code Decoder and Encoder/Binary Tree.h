@@ -18,12 +18,6 @@ struct BTNode
 
 	// Destructor (to avoid warning message)
 	virtual ~BTNode() {}
-	// to_string
-	virtual std::string to_string() const {
-		std::ostringstream os;
-		os << data;
-		return os.str();
-	}
 }; // End BTNode
 
 template<typename Item_Type>

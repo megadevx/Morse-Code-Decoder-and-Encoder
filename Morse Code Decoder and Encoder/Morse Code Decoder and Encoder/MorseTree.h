@@ -1,7 +1,7 @@
 #pragma once
 #include "Binary Tree.h"
 #include <string>
-#include <ifstream>
+#include <fstream>
 using namespace std;
 
 template<typename Item_Type>
@@ -19,8 +19,4 @@ public:
 	MorseTree(BTNode *r) {
 		root = r;
 	}
-
-	//Member Functions
-	Binary_Tree<Item_Type> parse(string in);
-
 };
