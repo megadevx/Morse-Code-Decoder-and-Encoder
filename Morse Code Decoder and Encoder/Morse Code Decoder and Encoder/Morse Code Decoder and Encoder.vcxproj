@@ -112,11 +112,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Binary Tree.h" />
-    <ClInclude Include="Decoder.h" />
+    <ClInclude Include="MorseTree.h" />
     <ClInclude Include="Encoder.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Decoder.cpp" />
+    <ClCompile Include="MorseTree.cpp" />
     <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>

@@ -18,10 +18,10 @@
     <ClInclude Include="Binary Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Decoder.h">
+    <ClInclude Include="Encoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Encoder.h">
+    <ClInclude Include="MorseTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClCompile Include="Encoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Decoder.cpp">
+    <ClCompile Include="MorseTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
