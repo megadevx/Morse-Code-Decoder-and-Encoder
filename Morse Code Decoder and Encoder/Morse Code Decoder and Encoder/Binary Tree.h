@@ -23,11 +23,15 @@ struct BTNode
 template<typename Item_Type>
 class Binary_Tree
 {
-
+public:
+	Binary_Tree() {
+		root = nullptr;
+	}
 
 	Binary_Tree(BTNode<Item_Type>* new_root) :
 		root(new_root) {}
 
+private:
 	// Data Field
 	BTNode<Item_Type>* root;
 

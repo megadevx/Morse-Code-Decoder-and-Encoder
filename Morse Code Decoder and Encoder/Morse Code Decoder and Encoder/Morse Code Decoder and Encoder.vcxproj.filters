@@ -24,6 +24,12 @@
     <ClInclude Include="MorseTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Morse Converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Morse Hash Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -32,12 +38,12 @@
     <ClCompile Include="Encoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MorseTree.cpp">
+    <ClCompile Include="Morse Converter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\..\Downloads\morse.txt">
+    <Text Include="morse.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
