@@ -10,7 +10,7 @@ public:
 	Morse_Converter() {}
 
 	//Member Functions
-	string parse();
+	void parse();
 	string decode(string in);
 	string encode(string in);
 };

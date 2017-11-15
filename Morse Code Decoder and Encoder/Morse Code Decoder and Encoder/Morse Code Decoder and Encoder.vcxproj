@@ -121,6 +121,7 @@
     <ClCompile Include="Morse Converter.cpp" />
     <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Morse Hash Table.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="morse.txt" />
