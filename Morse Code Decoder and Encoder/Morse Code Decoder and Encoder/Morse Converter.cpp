@@ -18,9 +18,10 @@ void Morse_Converter::parse() {
 
 string Morse_Converter::decode(string in) {
 	//Takes in a string of morse code, converts to letters	[delimeter = space]
-
+	return "";
 }
 
 string Morse_Converter::encode(string in) {
 	//Takes in a string of letters, converts to morse code	[delimeter = space]
+	return "";
 }

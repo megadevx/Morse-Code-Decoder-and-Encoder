@@ -1,39 +1,63 @@
 #pragma once
-//Binary Tree Class, courtesy of Dr Kuhail's source code
+#pragma once
+#include <string>
+using namespace std;
 
-/** A node for a Binary Tree. */
-template<typename Item_Type>
-struct BTNode
-{
-	// Data Fields
-	Item_Type data;
-	BTNode<Item_Type>* left;
-	BTNode<Item_Type>* right;
+struct BTNode {
+	//Data fields
+	string data;
+	BTNode *left;
+	BTNode *right;
 
-	// Constructor
-	BTNode(const Item_Type& the_data,
-		BTNode<Item_Type>* left_val = NULL,
-		BTNode<Item_Type>* right_val = NULL) :
-		data(the_data), left(left_val), right(right_val) {}
-
-	// Destructor (to avoid warning message)
-	virtual ~BTNode() {}
-}; // End BTNode
-
-template<typename Item_Type>
-class Binary_Tree
-{
-public:
-	Binary_Tree() {
-		root = nullptr;
+	//Default constructor
+	BTNode() {
+		data = "\n";
 	}
 
-	Binary_Tree(BTNode<Item_Type>* new_root) :
-		root(new_root) {}
+	//Constructor
+	BTNode(string data_val = "\n", BTNode *left_val = NULL, BTNode *right_val = NULL) {
+		data = data_val;
+		left = left_val;
+		right = right_val;
+	}
 
-private:
-	// Data Field
-	BTNode<Item_Type>* root;
-
+	//Destructor
+	~BTNode() {}
 };
 
+class Binary_Tree {
+private:
+	BTNode *root;
+
+public:
+	//Default constructor
+	Binary_Tree() {
+		root = new BTNode("\n");
+	}
+
+	//Non-default constructors
+	Binary_Tree(BTNode *newroot) {
+		root = newroot;
+	}
+
+	Binary_Tree(const string & the_data, const Binary_Tree & left = Binary_Tree(), const Binary_Tree & right = Binary_Tree()) {
+		root = new BTNode(the_data, left.root, right.root);
+	}
+
+	//Member Functions
+	BTNode* get_root() {
+		return root;
+	}
+
+	void set_root(BTNode *data) {
+		root = data;
+	}
+
+	Binary_Tree get_left_subtree() {
+		return Binary_Tree(root->left);
+	}
+
+	Binary_Tree get_right_subtree() {
+		return Binary_Tree(root->right);
+	}
+};

@@ -1,6 +1,8 @@
 #include "Morse Converter.h"
+#include "MorseTree.h"
 
 void main() {
-	Morse_Converter m = Morse_Converter();
-	m.parse();
+	MorseTree tree = MorseTree();
+	tree.add_letter("a");
+	system("PAUSE");
 }
