@@ -6,21 +6,31 @@ using namespace std;
 
 class MorseTree : public Binary_Tree {		//Derived class MorseTree from Binary_Tree
 private:
-	Binary_Tree tree;
 
 public:
 	//Default constructor
 	MorseTree(){
-		tree = Binary_Tree();
+		Binary_Tree();
 	}
 
 	//Member funtions
-	void add_letter(string line) {
-		BTNode *insert = new BTNode(line);
+	BTNode *get_root() {
+		return root;
+	}
 
-		//Takes in an input string, gets the letter (first character) and places into the tree
-		if (tree.get_root() == NULL) {
-			tree.set_root(insert);
+	void add_letter(BTNode *node, string code, string letter) {
+		//Get the first character, create node with that data
+		if (node == NULL) {
+			node = new BTNode();
+		}
+		if (code.size() == 0) {
+			node->data = letter;
+		}
+		else if (code[0] == '.') {
+			add_letter(node->left, code.substr(1), letter);
+		}
+		else if (code[0] == '_') {
+			add_letter(node->right, code.substr(1), letter);
 		}
 	}
 };

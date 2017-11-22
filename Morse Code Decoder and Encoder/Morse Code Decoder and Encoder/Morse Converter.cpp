@@ -12,7 +12,9 @@ void Morse_Converter::parse() {
 	while (morse.good()) {
 		//Read in the line, pass into the respective add_letter functions that will build the tree/hash
 		morse >> line;
-		tree.add_letter(line);
+		string letter = line.substr(0, 1);
+		string code = line.substr(1);
+		morse_tree.add_letter(morse_tree.get_root(), code, letter);
 	}
 }
 

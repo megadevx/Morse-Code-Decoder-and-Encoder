@@ -2,7 +2,7 @@
 #include "MorseTree.h"
 
 void main() {
-	MorseTree tree = MorseTree();
-	tree.add_letter("a");
+	Morse_Converter MC = Morse_Converter();
+	MC.parse();
 	system("PAUSE");
 }

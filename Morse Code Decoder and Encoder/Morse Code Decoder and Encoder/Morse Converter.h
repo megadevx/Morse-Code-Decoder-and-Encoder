@@ -3,7 +3,7 @@
 
 class Morse_Converter {
 private:
-	MorseTree tree = MorseTree();	//MorseTree for decoding
+	MorseTree morse_tree = MorseTree();	//MorseTree for decoding
 													//MorseHash for encoding
 public:
 	//Default constructor
