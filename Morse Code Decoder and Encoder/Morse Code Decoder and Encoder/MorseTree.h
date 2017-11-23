@@ -6,6 +6,7 @@ using namespace std;
 
 class MorseTree : public Binary_Tree {		//Derived class MorseTree from Binary_Tree
 private:
+	
 
 public:
 	//Default constructor
@@ -14,11 +15,7 @@ public:
 	}
 
 	//Member funtions
-	BTNode *get_root() {
-		return root;
-	}
-
-	void add_letter(BTNode *node, string code, string letter) {
+	void add_letter(BTNode *&node, string code, string letter) {
 		//Get the first character, create node with that data
 		if (node == NULL) {
 			node = new BTNode();

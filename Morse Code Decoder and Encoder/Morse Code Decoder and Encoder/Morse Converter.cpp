@@ -14,7 +14,8 @@ void Morse_Converter::parse() {
 		morse >> line;
 		string letter = line.substr(0, 1);
 		string code = line.substr(1);
-		morse_tree.add_letter(morse_tree.get_root(), code, letter);
+		BTNode *morse_root = morse_tree.get_root();
+		morse_tree.add_letter(morse_root, code, letter);
 	}
 }
 

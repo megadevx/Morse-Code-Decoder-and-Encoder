@@ -10,7 +10,7 @@ struct BTNode {
 	BTNode *right;
 
 	//Default constructor
-	BTNode(string data_val = "\n", BTNode *left_val = NULL, BTNode *right_val = NULL) {
+	BTNode(string data_val = "BTNode constructor", BTNode *left_val = NULL, BTNode *right_val = NULL) {
 		data = data_val;
 		left = left_val;
 		right = right_val;
@@ -27,7 +27,7 @@ protected:
 public:
 	//Default constructor
 	Binary_Tree() {
-		root = new BTNode("\n");
+		root = new BTNode();
 	}
 
 	//Non-default constructors
