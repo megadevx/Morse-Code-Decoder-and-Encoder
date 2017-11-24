@@ -16,7 +16,7 @@ public:
 
 	//Member funtions
 	void add_letter(BTNode *&node, string code, string letter) {
-		//Get the first character, create node with that data
+		//Add the letter to the tree in the correct position based on the reading of morse.txt
 		if (node == NULL) {
 			node = new BTNode();
 		}

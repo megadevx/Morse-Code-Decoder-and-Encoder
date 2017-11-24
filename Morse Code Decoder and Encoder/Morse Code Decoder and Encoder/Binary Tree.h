@@ -10,7 +10,7 @@ struct BTNode {
 	BTNode *right;
 
 	//Default constructor
-	BTNode(string data_val = "BTNode constructor", BTNode *left_val = NULL, BTNode *right_val = NULL) {
+	BTNode(string data_val = "", BTNode *left_val = NULL, BTNode *right_val = NULL) {
 		data = data_val;
 		left = left_val;
 		right = right_val;

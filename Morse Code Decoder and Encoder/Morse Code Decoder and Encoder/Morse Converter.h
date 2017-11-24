@@ -11,6 +11,7 @@ public:
 
 	//Member Functions
 	void parse();
+	string search(BTNode *node, string in);
 	string decode(string in);
 	string encode(string in);
 };
