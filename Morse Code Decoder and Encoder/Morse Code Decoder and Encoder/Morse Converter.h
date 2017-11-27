@@ -3,11 +3,13 @@
 
 class Morse_Converter {
 private:
-	MorseTree morse_tree = MorseTree();	//MorseTree for decoding
+	MorseTree morse_tree;	//MorseTree for decoding
 													//MorseHash for encoding
 public:
 	//Default constructor
-	Morse_Converter() {}
+	Morse_Converter() {
+		morse_tree = MorseTree();
+	}
 
 	//Member Functions
 	void parse();

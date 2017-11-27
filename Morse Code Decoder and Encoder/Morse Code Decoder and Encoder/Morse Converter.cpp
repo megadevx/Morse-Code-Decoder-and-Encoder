@@ -23,28 +23,31 @@ void Morse_Converter::parse() {
 
 string Morse_Converter::search(BTNode *node, string in) {
 	//Takes in a string of morse code, converts to letters [delimeter = space]
-	istringstream tokenizer(in);
-	char token = 0;
-
-	while (tokenizer >> token) {
-		if (node->data != "" && in.size() == 0) {
-			return node->data;
-		}
-		else if (token == '.') {
-			search(node->left, in.substr(1));
-		}
-		else if (token == '_'){
-			search(node->right, in.substr(1));
-		}
-		else {
-			return "Invalid morse string";
-		}
+	if (node->data != "" && in.size() == 0) {
+		return node->data;
+	}
+	else if (in[0] == '.') {
+		search(node->left, in.substr(1));
+	}
+	else if (in[0] == '_'){
+		search(node->right, in.substr(1));
+	}
+	else if (in[0] == ' ') {
+		;
+	}
+	else {
+		return "Invalid morse string";
 	}
 }
+
 string Morse_Converter::decode(string in) {
 	//Calls the search function to decode the string
-	string result = search(morse_tree.get_root(), in);
-	return result;
+	istringstream tokenizer(in);
+	string token = "";
+	while (tokenizer >> token) {
+		string result = search(morse_tree.get_root(), token);
+		return result;
+	}
 }
 
 string Morse_Converter::encode(string in) {

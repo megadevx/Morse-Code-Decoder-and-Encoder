@@ -4,6 +4,6 @@
 void main() {
 	Morse_Converter MC = Morse_Converter();
 	MC.parse();
-	MC.decode(".");
+	MC.decode("._.");
 	system("PAUSE");
 }
