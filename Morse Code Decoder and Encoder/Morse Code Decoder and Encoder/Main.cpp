@@ -2,11 +2,12 @@
 #include <iostream>
 using namespace std;
 void main() {
+	/*Use for testing
 	Morse_Converter MC;
 	MC.parse();
-	MC.decode("._. . _");
-	string result1 = MC.decode("._.");
-	string result2 = MC.encode("cat");
+	string result1 = MC.decode("....");
+	string result2 = MC.encode("hug");
 	cout << result1 << " " << result2 << endl;
+	*/
 	system("PAUSE");
 }
