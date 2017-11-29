@@ -21,19 +21,19 @@ void Morse_Converter::parse() {
 	morse.close();
 }
 
-string Morse_Converter::search(BTNode *node, string in) {
+string Morse_Converter::search(BTNode *&node, string in) {
 	//Takes in a string of morse code, converts to letters [delimeter = space]
 	if (node->data != "" && in.size() == 0) {
 		return node->data;
 	}
-	else if (in[0] == '.') {
-		search(node->left, in.substr(1));
+	else if (in.at(0) == '.') {
+		return search(node->left, in.substr(1));
 	}
-	else if (in[0] == '_'){
-		search(node->right, in.substr(1));
+	else if (in.at(0) == '_'){
+		return search(node->right, in.substr(1));
 	}
-	else if (in[0] == ' ') {
-		;
+	else if (node == NULL) {
+		return "";
 	}
 	else {
 		return "Invalid morse string";
@@ -42,12 +42,25 @@ string Morse_Converter::search(BTNode *node, string in) {
 
 string Morse_Converter::decode(string in) {
 	//Calls the search function to decode the string
-	istringstream tokenizer(in);
-	string token = "";
-	while (tokenizer >> token) {
-		string result = search(morse_tree.get_root(), token);
-		return result;
+	char token = ' ';
+	string code = "";
+	BTNode *root = morse_tree.get_root();
+	string result = "";
+
+	for (int i = 0; i < in.size(); i++) {
+		token = in[i];
+		if (token != ' ') {
+			code += token;
+			if (i == in.size() - 1) {
+				result += search(root, code);
+			}
+		}
+		else if (token == ' ') {
+			result += search(root, code);
+			code = "";
+		}
 	}
+	return result;
 }
 
 string Morse_Converter::encode(string in) {

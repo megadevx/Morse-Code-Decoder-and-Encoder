@@ -21,10 +21,9 @@ struct BTNode {
 };
 
 class Binary_Tree {
-protected:
+public:
 	BTNode *root;
 
-public:
 	//Default constructor
 	Binary_Tree() {
 		root = new BTNode();
