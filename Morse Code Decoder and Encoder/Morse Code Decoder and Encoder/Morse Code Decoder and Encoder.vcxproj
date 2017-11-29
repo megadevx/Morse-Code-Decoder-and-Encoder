@@ -114,14 +114,11 @@
     <ClInclude Include="Binary Tree.h" />
     <ClInclude Include="Morse Hash Table.h" />
     <ClInclude Include="MorseTree.h" />
-    <ClInclude Include="Encoder.h" />
     <ClInclude Include="Morse Converter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Morse Converter.cpp" />
-    <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Morse Hash Table.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="morse.txt" />

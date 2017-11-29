@@ -17,6 +17,7 @@ void Morse_Converter::parse() {
 		string code = line.substr(1);
 		BTNode *morse_root = morse_tree.get_root();
 		morse_tree.add_letter(morse_root, code, letter);
+		morse_hash.add_letter(letter, code);
 	}
 	morse.close();
 }
@@ -65,5 +66,12 @@ string Morse_Converter::decode(string in) {
 
 string Morse_Converter::encode(string in) {
 	//Takes in a string of letters, converts to morse code	[delimeter = space]
-	return "";
+	string result = "";
+	string letter;
+	for (string::iterator iter = in.begin(); iter != in.end(); iter++) {
+		letter = *iter;
+		result.append(morse_hash.get_morse_version(letter));
+		result.append(" ");
+	}
+	return result;
 }
