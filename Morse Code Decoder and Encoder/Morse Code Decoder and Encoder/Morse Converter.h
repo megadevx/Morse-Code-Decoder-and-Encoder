@@ -1,10 +1,11 @@
 #pragma once
 #include "MorseTree.h"
+#include "Morse Hash Table.h"
 
 class Morse_Converter {
 private:
 	MorseTree morse_tree;	//MorseTree for decoding
-													//MorseHash for encoding
+	MorseHash morse_hash;//MorseHash for encoding
 public:
 	//Default constructor
 	Morse_Converter() {

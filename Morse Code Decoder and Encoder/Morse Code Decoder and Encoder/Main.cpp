@@ -1,9 +1,11 @@
 #include "Morse Converter.h"
-#include "MorseTree.h"
-
+#include <iostream>
+using namespace std;
 void main() {
-	Morse_Converter MC = Morse_Converter();
+	Morse_Converter MC;
 	MC.parse();
-	MC.decode("._.");
+	string result1 = MC.decode("._.");
+	string result2 = MC.encode("cat");
+	cout << result1 << " " << result2 << endl;
 	system("PAUSE");
 }
